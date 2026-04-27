@@ -36,5 +36,5 @@
     // Gemini CLIが拡張機能Gemini CLI Companionと連携する為に必要
     "REMOTE_CONTAINERS": "true"
   },
-  "postCreateCommand": "npm install -g @google/gemini-cli"
+  "postCreateCommand": "npm install -g @google/gemini-cli && pip install uv && [ -f \"pyproject.toml\" ] && uv sync"
 }
