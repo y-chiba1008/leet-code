@@ -4,14 +4,16 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        // common
         "adam-bender.commit-message-editor",
         "hediet.vscode-drawio",
         "mhutchie.git-graph",
         "ritwickdey.LiveServer",
         "mechatroner.rainbow-csv",
+        "google.gemini-cli-vscode-ide-companion",
+        // python
         "ms-python.python",
-        "charliermarsh.ruff",
-        "google.gemini-cli-vscode-ide-companion"
+        "charliermarsh.ruff"
       ],
       "settings": {
         "[python]": {
