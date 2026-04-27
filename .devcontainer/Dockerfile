@@ -21,3 +21,8 @@ RUN mise use -g npm:@google/gemini-cli
 
 # remove caches
 RUN mise cache clean
+
+# setup permissions and trust
+RUN chown -R vscode:vscode /mise
+ENV MISE_TRUSTED_CONFIG_PATHS="/workspaces"
+
