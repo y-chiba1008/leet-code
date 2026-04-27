@@ -1,14 +1,17 @@
 {
   "name": "${localWorkspaceFolderBasename}",
-  "build": {
-    "context": ".",
-    "dockerfile": "./Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/python:3.14",
   "customizations": {
     "vscode": {
       "extensions": [
+        "adam-bender.commit-message-editor",
+        "hediet.vscode-drawio",
+        "mhutchie.git-graph",
+        "ritwickdey.LiveServer",
+        "mechatroner.rainbow-csv",
         "ms-python.python",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "google.gemini-cli-vscode-ide-companion"
       ],
       "settings": {
         "[python]": {
@@ -22,5 +25,14 @@
       }
     }
   },
-  "postCreateCommand": "mise install && uv sync"
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "containerEnv": {
+    // Gemini CLIが拡張機能Gemini CLI Companionと連携する為に必要
+    "REMOTE_CONTAINERS": "true"
+  },
+  "postCreateCommand": "npm install -g @google/gemini-cli"
 }
