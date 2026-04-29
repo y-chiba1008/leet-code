@@ -16,10 +16,6 @@
         "charliermarsh.ruff"
       ],
       "settings": {
-        // Gemini CLI関連
-        "general": {
-          "preferredEditor": "vscode"
-        },
         // python関連
         "python.testing.pytestEnabled": true,
         "python.testing.nosetestsEnabled": false,
