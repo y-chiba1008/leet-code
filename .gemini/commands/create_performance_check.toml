@@ -1,0 +1,13 @@
+description = "指定した4桁の問題番号の performance_check.py を作成します。"
+
+prompt = """
+ユーザーが4桁の問題IDを提供しました: {{args}}
+
+以下の手順でアクションを実行してください：
+1. `problems/` フォルダ内で "{{args}}" で始まるディレクトリを探してください。
+2. そのディレクトリ内の `main.py` と `description.md` の内容を読み取ってください。
+3. `0001_two_sum/performance_check.py` のスタイル（ランダムなテストケース生成、測定、seabornによる可視化）を参考にして、その問題に適した `performance_check.py` を作成してください。
+4. 作成した `performance_check.py` を同じディレクトリに書き込んでください。
+
+ディレクトリやファイルが見つからない場合は、エラーを報告してください。
+"""
