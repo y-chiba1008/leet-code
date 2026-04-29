@@ -1,4 +1,4 @@
-description = "指定した4桁の問題番号の main.py と description.md を参考にして test_main.py を作成します。"
+description = "指定した4桁の問題番号の main.py と description.md を参考にして test_nnnn.py を作成します。"
 
 prompt = """
 ユーザーが4桁の問題IDを提供しました: {{args}}
@@ -6,9 +6,9 @@ prompt = """
 以下の手順でアクションを実行してください：
 1. `problems/` フォルダ内で "{{args}}" で始まるディレクトリを探してください。
 2. そのディレクトリ内の `main.py` と `description.md` の内容を読み取ってください。
-3. `0001_two_sum/test_main.py` のスタイル（pytest.mark.parametrize を使用）を参考にして、適切なテストケースを含む `test_main.py` を作成してください。
-4. 作成した `test_main.py` を同じディレクトリに書き込んでください。
-5. 最後に `pytest` を実行してテストが通ることを確認してください。
+3. `0001_two_sum/test_0001.py` のスタイル（pytest.mark.parametrize を使用）を参考にして、適切なテストケースを含む `test_{{args}}.py` を作成してください。
+4. 作成した `test_{{args}}.py` を同じディレクトリに書き込んでください。
+5. テスト作成時点ではテスト対象のコードが未完成の為、パスしない可能性があります。 `pytest` を実行してテストが通ることを確認する必要はありません。
 
 ディレクトリやファイルが見つからない場合は、エラーを報告してください。
 """
