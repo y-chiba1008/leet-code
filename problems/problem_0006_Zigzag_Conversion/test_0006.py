@@ -1,5 +1,5 @@
 import pytest
-from main import Solution
+from .main import Solution
 
 arg_names = ['s', 'numRows', 'expect']
 arg_values = [
